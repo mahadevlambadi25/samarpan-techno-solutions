@@ -1,0 +1,30 @@
+import { m, useReducedMotion } from 'framer-motion'
+import type { ReactNode } from 'react'
+
+interface RevealProps {
+  children: ReactNode
+  delay?: number
+  className?: string
+  as?: 'div' | 'li' | 'article'
+}
+
+/** Subtle fade-up on scroll. Disabled for users who prefer reduced motion. */
+export function Reveal({ children, delay = 0, className, as = 'div' }: RevealProps) {
+  const reduce = useReducedMotion()
+  const Comp = m[as]
+  if (reduce) {
+    const Plain = as
+    return <Plain className={className}>{children}</Plain>
+  }
+  return (
+    <Comp
+      className={className}
+      initial={{ opacity: 0, y: 18 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: '0px 0px -60px 0px' }}
+      transition={{ duration: 0.5, delay, ease: [0.22, 1, 0.36, 1] }}
+    >
+      {children}
+    </Comp>
+  )
+}
