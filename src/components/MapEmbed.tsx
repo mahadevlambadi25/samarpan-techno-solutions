@@ -4,12 +4,12 @@ import { mapsEmbedSrc, mapsLink } from '../lib/contact'
 
 export function MapEmbed() {
   return (
-    <div className="relative border border-line bg-surface">
-      <div className="aspect-[4/3] w-full sm:aspect-[16/9] lg:aspect-auto lg:h-full lg:min-h-[420px]">
+    <div className="relative h-full border border-line bg-surface">
+      <div className="relative aspect-[4/3] w-full sm:aspect-[16/9] lg:aspect-auto lg:h-full lg:min-h-[420px]">
         <iframe
           title={`Map showing ${company.name}, ${fullAddress}`}
           src={mapsEmbedSrc}
-          className="size-full border-0"
+          className="absolute inset-0 size-full border-0"
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
           allowFullScreen

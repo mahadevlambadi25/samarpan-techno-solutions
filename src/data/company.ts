@@ -20,7 +20,7 @@ export const company = {
     local: '9972766644',
     e164: '+919972766644',
   },
-  email: 'samarpantekk@gmail.com',
+  email: 'samarpantek@gmail.com',
   address: {
     street: '63/3-2, P&T Colony Road',
     locality: 'Srigandakaval, Sunkadakatte',
@@ -28,6 +28,11 @@ export const company = {
     region: 'Karnataka',
     postalCode: '560091',
     country: 'IN',
+  },
+  /** Exact office location (supplied by the company) — used for the map pin. */
+  geo: {
+    latitude: 12.99025101293695,
+    longitude: 77.51182491655341,
   },
 } as const
 

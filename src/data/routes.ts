@@ -58,7 +58,7 @@ export const ROUTES: RouteMeta[] = [
     label: 'Contact',
     title: 'Contact Us | Samarpan Techno Solutions, Bangalore',
     description:
-      'Contact SAMARPAN TECHNO SOLUTIONS, Sunkadakatte, Bangalore - 560091. Call 9972766644, WhatsApp or email samarpantekk@gmail.com for electrical control panel enquiries.',
+      'Contact SAMARPAN TECHNO SOLUTIONS, Sunkadakatte, Bangalore - 560091. Call 9972766644, WhatsApp or email samarpantek@gmail.com for electrical control panel enquiries.',
     changefreq: 'yearly',
     priority: 0.9,
   },

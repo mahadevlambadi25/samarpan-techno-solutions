@@ -1,4 +1,4 @@
-import { company, fullAddress } from '../data/company'
+import { company } from '../data/company'
 
 export const telHref = `tel:${company.phone.e164}`
 
@@ -16,9 +16,8 @@ export function whatsappHref(
   return `https://wa.me/${company.phone.e164.replace('+', '')}?text=${encodeURIComponent(text)}`
 }
 
-const mapsQuery = encodeURIComponent(`${company.name}, ${fullAddress}, ${company.address.region}, India`)
-const addressQuery = encodeURIComponent(`${fullAddress}, ${company.address.region}, India`)
+const coords = `${company.geo.latitude},${company.geo.longitude}`
 
-/** Keyless Google Maps embed pointing at the supplied business address. */
-export const mapsEmbedSrc = `https://maps.google.com/maps?q=${addressQuery}&z=16&output=embed`
-export const mapsLink = `https://www.google.com/maps/search/?api=1&query=${mapsQuery}`
+/** Keyless Google Maps embed with the pin on the exact office coordinates. */
+export const mapsEmbedSrc = `https://maps.google.com/maps?q=${coords}&z=17&output=embed`
+export const mapsLink = `https://www.google.com/maps/search/?api=1&query=${coords}`

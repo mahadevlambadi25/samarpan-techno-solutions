@@ -2,7 +2,7 @@ import { company } from '../data/company.ts'
 
 /**
  * LocalBusiness structured data, built ONLY from verified company details.
- * No ratings, opening hours, founding date or geo-coordinates are included because
+ * No ratings, opening hours or founding date are included because
  * they have not been supplied by the company.
  */
 export function buildLocalBusinessSchema(siteUrl: string) {
@@ -26,6 +26,11 @@ export function buildLocalBusinessSchema(siteUrl: string) {
       addressRegion: company.address.region,
       postalCode: company.address.postalCode,
       addressCountry: company.address.country,
+    },
+    geo: {
+      '@type': 'GeoCoordinates',
+      latitude: company.geo.latitude,
+      longitude: company.geo.longitude,
     },
     areaServed: company.address.city,
   }

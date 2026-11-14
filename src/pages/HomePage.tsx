@@ -209,7 +209,7 @@ export default function HomePage() {
               Go to Contact Page <ArrowRight />
             </ButtonLink>
           </Reveal>
-          <Reveal delay={0.1}>
+          <Reveal delay={0.1} className="h-full">
             <MapEmbed />
           </Reveal>
         </div>

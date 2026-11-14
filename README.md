@@ -28,7 +28,7 @@ npm run dev               # http://localhost:5173
 | Variable                    | Purpose |
 | --------------------------- | ------- |
 | `VITE_SITE_URL`             | Final verified domain, e.g. `https://www.example.com` (no trailing slash). Enables canonical URLs, `og:url`, `sitemap.xml` and the `url` field in structured data. If empty, these are **omitted**, not filled with a fake domain. |
-| `VITE_WEB3FORMS_ACCESS_KEY` | Access key for the contact form. Create a free key at <https://web3forms.com> **using samarpantekk@gmail.com** so enquiries arrive in that inbox. |
+| `VITE_WEB3FORMS_ACCESS_KEY` | Access key for the contact form. Create a free key at <https://web3forms.com> **using samarpantek@gmail.com** so enquiries arrive in that inbox. |
 
 Variables are embedded at **build time**. After changing them, rebuild and redeploy.
 
